@@ -5,14 +5,14 @@
 
 namespace st
 {
-	void STInit(ST* ps)
+	void StackInit(ST* ps, int n)
 	{
-		ps->a = NULL;
+		ps->a = (int*)malloc(sizeof(int) * n);
 		ps->top = ps->capacity = 0;
 	}
 
 
-	void STPush(ST* ps, int x)
+	void StackPush(ST* ps, int x)
 	{
 
 	}

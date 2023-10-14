@@ -14,6 +14,7 @@ namespace st
 		int capacity;
 	}ST;
 
-	void STInit(ST* ps);
-	void STPush(ST* ps, int x);
+	// È±Ê¡²ÎÊý
+	void StackInit(ST* ps, int n = 4);
+	void StackPush(ST* ps, int x);
 }
