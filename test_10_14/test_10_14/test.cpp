@@ -1,36 +1,55 @@
-#include <stdio.h>
+//#include <stdio.h>
 
-namespace test
-{
-	int a = -1;
+//namespace test
+//{
+//	int a = -1;
+//
+//	namespace test1
+//	{
+//		int rand = 10;
+//	}
+//
+//	struct Node
+//	{
+//		int val;
+//		int* next;
+//	};
+//
+//	int Add(int x, int y)
+//	{
+//		return x + y;
+//	}
+//}
+//
+//
+//int main()
+//{
+//	printf("%d\n", test::a);
+//
+//	struct test::Node node = { 10, NULL };
+//	int sum = test::Add(10, 20);
+//	printf("%d\n", sum);
+//
+//	printf("%p\n", &(test::test1::rand));
+//	printf("%d\n", test::test1::rand);
+//	return 0;
+//}
 
-	namespace test1
-	{
-		int rand = 10;
-	}
 
-	struct Node
-	{
-		int val;
-		int* next;
-	};
+#include "Stack.h"
 
-	int Add(int x, int y)
-	{
-		return x + y;
-	}
-}
+
+using namespace st;
 
 
 int main()
 {
-	printf("%d\n", test::a);
+	ST st;
+	STInit(&st);
 
-	struct test::Node node = { 10, NULL };
-	int sum = test::Add(10, 20);
-	printf("%d\n", sum);
-
-	printf("%p\n", &(test::test1::rand));
-	printf("%d\n", test::test1::rand);
+	STPush(&st, 10);
+	STPush(&st, 20);
+	STPush(&st, 30);
+	STPush(&st, 40);
 	return 0;
 }
