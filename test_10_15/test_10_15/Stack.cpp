@@ -6,7 +6,8 @@
 
 namespace st
 {
-	void StackInit(ST* ps, int n)
+	// 缺省参数只能在一个地方给
+	/*void StackInit(ST* ps, int n)
 	{
 		ps->a = (int*)malloc(sizeof(int) * n);
 		ps->top = ps->capacity = 0;
@@ -16,5 +17,5 @@ namespace st
 	void StackPush(ST* ps, int x)
 	{
 		;
-	}
+	}*/
 }
