@@ -5,17 +5,35 @@ using namespace std;
 
 
 
-void func(int a, int b = 10, int c = 20)
-{
-	cout << a << endl << b << endl << c << endl << endl;
-}
+//void func(int a, int b = 10, int c = 20)
+//{
+//	cout << a << endl << b << endl << c << endl << endl;
+//}
+//
+//
+//int main()
+//{
+//	func(1);
+//	func(1, 2);
+//	func(1, 2, 3);
+//
+//	return 0;
+//}
+//
+//void Func(int* b)
+//{
+//	cout << b << endl;
+//
+//}
+//
+//
+//int main()
+//{
+//	int a = 10;
+//	cout << &a << endl;
+//
+//	Func(&a);
+//	return 0;
+//}
 
 
-int main()
-{
-	func(1);
-	func(1, 2);
-	func(1, 2, 3);
-
-	return 0;
-}
