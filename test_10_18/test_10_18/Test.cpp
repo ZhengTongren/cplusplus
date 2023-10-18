@@ -119,9 +119,33 @@
 
 #include "Func.h"
 
+//int main()
+//{
+//	f(1, 2.2);
+//	f(3.3, 1);
+//	return 0;
+//}
+
+//
+//int main()
+//{
+//	int a = 10;
+//	int& b = a;
+//
+//	int c = 20;
+//	// b = &c;// err
+//
+//	return 0;
+//}
+
+
 int main()
 {
-	f(1, 2.2);
-	f(3.3, 1);
+	int a = 10;
+	int& b = a;
+
+	int c = 0;
+
+	b = c;
 	return 0;
 }
