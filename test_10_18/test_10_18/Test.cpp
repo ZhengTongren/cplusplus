@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
-
-#include <iostream>
-
-using namespace std;
 //
+//#include <iostream>
+//
+//using namespace std;
+////
 //
 //void Func(int a, int b = 20, int c = 30)
 //{
@@ -41,23 +41,23 @@ using namespace std;
 //	return 0;
 //}
 
-
-// 缺省参数，函数重载（规则和原理），引用（别名部分）
-
-void Swap(int* x, int* y)
-{
-	int tmp = *x;
-	*x = *y;
-	*y = tmp;
-}
-
-// 函数名相同 函数的参数（类型，个数，顺序）不同
-void Swap(int& x, int& y)
-{
-	int tmp = x;
-	x = y;
-	y = tmp;
-}
+//
+//// 缺省参数，函数重载（规则和原理），引用（别名部分）
+//
+//void Swap(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//}
+//
+//// 函数名相同 函数的参数（类型，个数，顺序）不同
+//void Swap(int& x, int& y)
+//{
+//	int tmp = x;
+//	x = y;
+//	y = tmp;
+//}
 
 
 //int main()
@@ -116,4 +116,6 @@ void Swap(int& x, int& y)
 //	return 0;
 //}
 
+
+#include "Func.h"
 
