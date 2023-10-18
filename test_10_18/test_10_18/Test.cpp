@@ -119,3 +119,9 @@
 
 #include "Func.h"
 
+int main()
+{
+	f(1, 2.2);
+	f(3.3, 1);
+	return 0;
+}
