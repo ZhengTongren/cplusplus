@@ -138,14 +138,34 @@
 //	return 0;
 //}
 
+//
+//int main()
+//{
+//	int a = 10;
+//	int& b = a;
+//
+//	int c = 0;
+//
+//	b = c;
+//	return 0;
+//}
 
-int main()
-{
-	int a = 10;
-	int& b = a;
 
-	int c = 0;
+//int& Count()
+//{
+//	int n = 0;
+//	n++;
+//
+//	return n;
+//}
+//
+//
+//int main()
+//{
+//	int ret = Count();
+//	cout << ret << endl;
+//
+//	return 0;
+//}
 
-	b = c;
-	return 0;
-}
+
