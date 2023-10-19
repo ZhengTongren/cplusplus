@@ -32,3 +32,47 @@ using namespace std;
 //}
 
 
+//#define ADD(int , int ) x + y;
+//
+//
+//int main()
+//{
+//	int a = ADD(1, 2);
+//
+//
+//	return 0;
+//}
+
+
+//#define ADD(x, y) x + y
+//
+//
+//int main()
+//{
+//	cout << ADD(1, 2) << endl;
+//	return 0;
+//}
+
+
+//// ºêÌæ»»
+//#define ADD(x, y) ((x) + (y))
+//
+//
+//int main()
+//{
+//	cout << ADD(1, 2) << endl;
+//	return 0;
+//}
+
+
+//inline int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//
+//int main()
+//{
+//	cout << Add(1, 2) << endl;
+//	return 0;
+//}
