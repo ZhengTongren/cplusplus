@@ -73,6 +73,7 @@ using namespace std;
 //
 //int main()
 //{
-//	cout << Add(1, 2) << endl;
+//	int a = Add(1, 2);
+//	cout << a << endl;
 //	return 0;
 //}
