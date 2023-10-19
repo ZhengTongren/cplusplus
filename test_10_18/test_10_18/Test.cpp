@@ -169,11 +169,13 @@
 //}
 
 
-int main()
-{
-	int a = 10;
-	int& b = a;
+//int main()
+//{
+//	int a = 10;
+//	int& b = a;
+//
+//	b--;
+//	return 0;
+//}
 
-	b--;
-	return 0;
-}
+
