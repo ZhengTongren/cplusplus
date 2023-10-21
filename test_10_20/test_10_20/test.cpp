@@ -39,9 +39,28 @@ struct A
 };
 
 
-int main()
-{
-	struct A A1;
-	cout << A1.add(1, 2) << endl;
-	return 0;
-}
+//int main()
+//{
+//	struct A A1;
+//	cout << A1.add(1, 2) << endl;
+//	return 0;
+//}
+
+
+//void Swap(int& x, int& y)
+//{
+//	int tmp = x;
+//	x = y;
+//	y = tmp;
+//}
+//
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//
+//	Swap(a, b);
+//	cout << a << endl << b << endl;
+//	return 0;
+//}
