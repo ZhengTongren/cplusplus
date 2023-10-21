@@ -2,7 +2,7 @@
 
 #include "mktest.h"
 
-inline int Add(double x, double y)
-{
-	return (int)(x - y);
-}
+//inline int Add(double x, double y)
+//{
+//	return (int)(x - y);
+//}
