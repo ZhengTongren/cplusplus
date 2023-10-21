@@ -64,3 +64,32 @@ struct A
 //	cout << a << endl << b << endl;
 //	return 0;
 //}
+
+
+void Func1()
+{
+	int a = 0;
+	cout << &a << endl << endl;
+}
+
+void Func2()
+{
+	int b = 0;
+	cout << &b << endl << endl;
+}
+
+
+void Func3()
+{
+	int c = 0;
+	int d = 0;
+	cout << &c << endl << &d << endl;
+}
+
+int main()
+{
+	Func1();
+	Func2();
+	Func3();
+	return 0;
+}
