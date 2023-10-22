@@ -197,35 +197,35 @@
 //}
 
 
-#include <iostream>
-using namespace std;
-
-int& Add1(int a, int b)
-{
-    static int c = a + b;
-    return c;
-}
-
-int& Add2(int a, int b)
-{
-    static int c;
-    c = a + b;
-    return c;
-}
-
-int main()
-{
-    int& ret1 = Add1(1, 2);
-    cout << "Add1(1, 2) = " << ret1 << endl;
-    Add1(3, 4);
-    cout << "Add1(1, 2) = " << ret1 << endl << endl;
-
-    int& ret2 = Add2(1, 2);
-    cout << "Add2(1, 2) = " << ret2 << endl;
-    Add2(3, 4);
-    cout << "Add2(1, 2) = " << ret2 << endl << endl;
-    return 0;
-}
+//#include <iostream>
+//using namespace std;
+//
+//int& Add1(int a, int b)
+//{
+//    static int c = a + b;
+//    return c;
+//}
+//
+//int& Add2(int a, int b)
+//{
+//    static int c;
+//    c = a + b;
+//    return c;
+//}
+//
+//int main()
+//{
+//    int& ret1 = Add1(1, 2);
+//    cout << "Add1(1, 2) = " << ret1 << endl;
+//    Add1(3, 4);
+//    cout << "Add1(1, 2) = " << ret1 << endl << endl;
+//
+//    int& ret2 = Add2(1, 2);
+//    cout << "Add2(1, 2) = " << ret2 << endl;
+//    Add2(3, 4);
+//    cout << "Add2(1, 2) = " << ret2 << endl << endl;
+//    return 0;
+//}
 
 
 //#include <iostream>
