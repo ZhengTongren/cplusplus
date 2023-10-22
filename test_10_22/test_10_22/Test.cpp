@@ -303,7 +303,7 @@ using namespace std;
 //}
 
 
-inline int Add(int x, int y)
+int Add(int x, int y)
 {
 	return x + y;
 }
