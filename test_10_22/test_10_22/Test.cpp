@@ -290,3 +290,27 @@ using namespace std;
 //}
 
 
+//inline int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//
+//int main()
+//{
+//	Add(1, 2);
+//	return 0;
+//}
+
+
+inline int Add(int x, int y)
+{
+	return x + y;
+}
+
+
+int main()
+{
+	Add(1, 2);
+	return 0;
+}
