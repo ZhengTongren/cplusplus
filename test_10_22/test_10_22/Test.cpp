@@ -271,3 +271,22 @@
 //
 //    return 0;
 //}
+
+#include <iostream>
+using namespace std;
+
+
+//int main()
+//{
+//	int a = 0;
+//	auto b = &a;
+//	auto* c = &a;
+//
+//
+//	cout << b << endl;
+//	cout << c << endl;
+//
+//	return 0;
+//}
+
+
