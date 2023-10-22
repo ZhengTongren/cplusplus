@@ -303,14 +303,47 @@ using namespace std;
 //}
 
 
-int Add(int x, int y)
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//
+//int main()
+//{
+//	Add(1, 2);
+//	return 0;
+//}
+
+
+class Stack
 {
-	return x + y;
-}
+private:
+	int* a;
+	int top;
+	int capacity;
+public:
+	void Init()
+	{
+		a = nullptr;
+		top = capacity = 0;
+	}
+
+	void Push(int x)
+	{
+		// ...
+	}
+};
 
 
 int main()
 {
-	Add(1, 2);
+	Stack s1;
+	s1.Init();
+	s1.Push(1);
+	s1.Push(2);
+	s1.Push(3);
+	s1.Push(4);
+
 	return 0;
 }
