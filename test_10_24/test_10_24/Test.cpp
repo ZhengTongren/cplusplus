@@ -109,8 +109,35 @@ using namespace std;
 //}
 
 
-int main()
-{
-	auto a[] = { 1, 2, 3, 4 };
-	return 0;
-}
+//int main()
+//{
+//	auto a[] = { 1, 2, 3, 4 };
+//	return 0;
+//}
+
+
+#include <iostream>
+using namespace std;
+//
+//int main()
+//{
+//    int a[] = { 1, 2, 3, 4 };
+//    for (auto e = a)
+//    {
+//        cout << e << " ";
+//    }
+//    return 0;
+//}
+
+
+//int main()
+//{
+//	int array[] = { 1, 2, 3, 4, 5 };
+//
+//	for (auto e : array)
+//		cout << e << " ";
+//
+//	return 0;
+//}
+
+
