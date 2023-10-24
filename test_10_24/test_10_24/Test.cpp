@@ -156,4 +156,57 @@ using namespace std;
 //	return 0;
 //}
 
+//
+//void f(int)
+//{
+//    cout << "f(int)" << endl;
+//}
+//
+//void f(int*)
+//{
+//    cout << "f(int*)" << endl;
+//}
+//
+//int main()
+//{
+//    /*f(0);
+//    f(NULL);*/
+//
+//    NULL;
+//
+//    return 0;
+//}
 
+
+//int main()
+//{
+//	cout << sizeof(nullptr) << endl;
+//	cout << sizeof((void*)0) << endl;
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	auto arr[] = { 1, 2, 3, 4 };
+//	return 0;
+//}
+
+
+//void f(auto)
+//{
+//	cout << "f()" << endl;
+//}
+
+
+//auto f(int)
+//{
+//	;
+//}
+//
+//
+//int main()
+//{
+//	f(0);
+//	return 0;
+//}
