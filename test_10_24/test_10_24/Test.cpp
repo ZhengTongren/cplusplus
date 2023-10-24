@@ -71,3 +71,46 @@ using namespace std;
 //
 //	return 0;
 //}
+
+
+#include "Stack.h"
+
+//
+//int main()
+//{
+//	f(10);
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//    int a = 0;
+//
+//    auto b = a;
+//    auto c = &a;
+//    auto* d = &a;
+//    auto& e = a;
+//
+//    cout << typeid(b).name() << endl;
+//    cout << typeid(c).name() << endl;
+//    cout << typeid(d).name() << endl;
+//    cout << typeid(e).name() << endl;
+//
+//    return 0;
+//}
+
+
+//int main()
+//{
+//    auto a = 10, b = 2.2;
+//    return 0;
+//}
+
+
+int main()
+{
+	auto a[] = { 1, 2, 3, 4 };
+	return 0;
+}
