@@ -27,13 +27,47 @@ using namespace std;
 //}
 
 
-int main()
-{
-	int a = 10;
+//int main()
+//{
+//	int a = 10;
+//
+//	int& a1 = a;
+//
+//	int* pa = &a;
+//
+//	return 0;
+//}
 
-	int& a1 = a;
 
-	int* pa = &a;
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
 
-	return 0;
-}
+
+//inline int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//
+//int main()
+//{
+//	int a = 1, b = 2;
+//	Add(a, b);
+//
+//	return 0;
+//}
+
+
+//inline int Sub(int x, int y)
+//{
+//	return x - y;
+//}
+//
+//int main()
+//{
+//	int ret = Sub(1, 2);
+//
+//	return 0;
+//}
