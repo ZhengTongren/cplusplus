@@ -140,4 +140,20 @@ using namespace std;
 //	return 0;
 //}
 
+//
+//void func(int* arr)
+//{
+//	for (auto i : arr)
+//		cout << i << " ";
+//}
+//
+//
+//int main()
+//{
+//	int a[] = { 1, 2, 3, 4 };
+//	func(a);
+//
+//	return 0;
+//}
+
 
