@@ -275,6 +275,12 @@ public:
     {
         cout << _year << " " << _month << " " << _day << endl;
     }
+
+
+  /*  void Print(Date* this)
+    {
+        cout << this->_year << " " << this->_month << " " << this->_day << endl;
+    }*/
 };
 
 int main()
@@ -287,6 +293,9 @@ int main()
 
     d1.Print();
     d2.Print();
+
+    /*d1.Print(&d1);
+    d2.Print(&d2);*/
 
     return 0;
 }
