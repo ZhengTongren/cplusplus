@@ -39,7 +39,7 @@ public:
 	Date operator-(int day);
 
 	Date& operator++();
-	
+	Date operator++(int);
 
 
 	int operator-(const Date& y);

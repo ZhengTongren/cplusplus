@@ -65,7 +65,7 @@ void DateTest5()
 {
 	Date d1(2023, 11, 2);
 	++d1;
-
+	d1++.Print();
 	d1.Print();
 }
 

@@ -180,3 +180,9 @@ Date& Date::operator++()
 }
 
 
+Date Date::operator++(int)
+{
+	Date tmp = *this;
+	*this += 1;
+	return tmp;
+}
