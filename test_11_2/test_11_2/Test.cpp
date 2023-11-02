@@ -60,9 +60,19 @@ void DateTest4()
 	cout << (d2 - d1) << endl;
 }
 
+
+void DateTest5()
+{
+	Date d1(2023, 11, 2);
+	++d1;
+
+	d1.Print();
+}
+
+
 int main()
 {
-	DateTest4();
+	DateTest5();
 
 	return 0;
-}
+};

@@ -38,6 +38,9 @@ public:
 	Date& operator-=(int day);
 	Date operator-(int day);
 
+	Date& operator++();
+	
+
 
 	int operator-(const Date& y);
 };

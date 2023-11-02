@@ -171,3 +171,12 @@ int Date::operator-(const Date& y)
 
 	return n * flag;
 }
+
+
+Date& Date::operator++()
+{
+	*this += 1;
+	return *this;
+}
+
+
