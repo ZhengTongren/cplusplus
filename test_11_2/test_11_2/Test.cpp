@@ -64,9 +64,23 @@ void DateTest4()
 void DateTest5()
 {
 	Date d1(2023, 11, 2);
-	++d1;
+	Date d4(d1);
+	/*++d1;
 	d1++.Print();
-	d1.Print();
+	d1.Print();*/
+
+	//Date d2(d1);
+
+	Date d2 = d1--;
+	Date d3 = --d4;
+
+	d2.Print();
+	d3.Print();
+	
+	/*d1.Print();
+	d2.Print();
+	--d1;
+	d1.Print();*/
 }
 
 

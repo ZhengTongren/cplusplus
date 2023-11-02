@@ -40,6 +40,8 @@ public:
 
 	Date& operator++();
 	Date operator++(int);
+	Date& operator--();
+	Date operator--(int);
 
 
 	int operator-(const Date& y);
