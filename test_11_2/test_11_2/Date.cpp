@@ -110,3 +110,40 @@ bool Date::operator!=(const Date& y)
 {
 	return !(*this == y);
 }
+
+
+bool Date::operator>(const Date& y)
+{
+	if (_year > y._year)
+	{
+		return true;
+	}
+	else if (_year == y._year && _month > y._month)
+	{
+		return true;
+	}
+	else if (_year == y._year && _month == y._month && _day > y._day)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+
+bool Date::operator>=(const Date& y)
+{
+	return (*this > y) || (*this == y);
+}
+
+
+bool Date::operator<(const Date& y)
+{
+	return !(*this >= y);
+}
+
+
+bool Date::operator<=(const Date& y)
+{
+	return !(*this > y);
+}

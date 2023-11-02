@@ -36,9 +36,23 @@ void DateTest2()
 	d2.Print();*/
 }
 
+
+void DateTest3()
+{
+	Date d1(2023, 11, 2);
+	Date d2(2022, 11, 2);
+	Date d3(d1);
+
+	cout << (d1 > d2) << endl;
+	cout << (d1 >= d3) << endl;
+
+	cout << (d2 < d1) << endl;
+	cout << (d3 <= d1) << endl;
+}
+
 int main()
 {
-	DateTest2();
+	DateTest3();
 
 	return 0;
 }
