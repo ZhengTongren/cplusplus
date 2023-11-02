@@ -50,9 +50,19 @@ void DateTest3()
 	cout << (d3 <= d1) << endl;
 }
 
+
+void DateTest4()
+{
+	Date d1(2023, 11, 2);
+	Date d2 = d1 - 1990;
+
+	cout << (d1 - d2) << endl;
+	cout << (d2 - d1) << endl;
+}
+
 int main()
 {
-	DateTest3();
+	DateTest4();
 
 	return 0;
 }

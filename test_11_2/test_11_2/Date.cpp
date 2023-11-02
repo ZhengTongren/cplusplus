@@ -147,3 +147,27 @@ bool Date::operator<=(const Date& y)
 {
 	return !(*this > y);
 }
+
+
+int Date::operator-(const Date& y)
+{
+	int flag = 1;
+	Date max = *this;
+	Date min = y;
+
+	if (max < min)
+	{
+		max = y;
+		min = *this;
+		flag = -1;
+	}
+
+	int n = 0;
+	while (min != max)
+	{
+		min += 1;
+		n++;
+	}
+
+	return n * flag;
+}
