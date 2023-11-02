@@ -25,6 +25,9 @@ public:
 
 	int GetMonthDay(int year, int month);
 
+	bool operator==(const Date& y);
+	bool operator!=(const Date& y);
+
 	Date& operator+=(int day);
 	Date operator+(int day);
 	Date& operator-=(int day);

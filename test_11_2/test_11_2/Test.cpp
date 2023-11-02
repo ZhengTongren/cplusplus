@@ -28,10 +28,12 @@ void DateTest2()
 	Date d1(2023, 11, 2);
 	Date d2 = d1 - 500;
 
-	d1 -= 50;
+	cout << (d1 == d2) << endl;
+	cout << (d1 != d2) << endl;
+	/*d1 -= 50;
 
 	d1.Print();
-	d2.Print();
+	d2.Print();*/
 }
 
 int main()

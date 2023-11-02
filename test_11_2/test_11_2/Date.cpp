@@ -96,3 +96,17 @@ Date Date::operator-(int day)
 	tmp -= day;
 	return tmp;
 }
+
+
+bool Date::operator==(const Date& y)
+{
+	return _year == y._year
+		&& _month == y._month
+		&& _day == y._day;
+}
+
+
+bool Date::operator!=(const Date& y)
+{
+	return !(*this == y);
+}
