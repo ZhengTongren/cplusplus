@@ -41,6 +41,7 @@ public:
 
 	int operator-(const Date& y);
 
+	// сят╙
 	friend ostream& operator<<(ostream& out, const Date& d);
 	friend istream& operator>>(istream& in, Date& d);
 
