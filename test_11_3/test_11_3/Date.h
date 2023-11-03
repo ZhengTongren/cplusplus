@@ -20,18 +20,18 @@ public:
 
 	int GetMonthDay(int year, int month);
 
-	bool operator==(const Date& y);
-	bool operator!=(const Date& y);
+	bool operator==(const Date& y) const;
+	bool operator!=(const Date& y) const;
 
-	bool operator>(const Date& y);
-	bool operator>=(const Date& y);
-	bool operator<(const Date& y);
-	bool operator<=(const Date& y);
+	bool operator>(const Date& y) const;
+	bool operator>=(const Date& y) const;
+	bool operator<(const Date& y) const;
+	bool operator<=(const Date& y) const;
 
 	Date& operator+=(int day);
-	Date operator+(int day);
+	Date operator+(int day) const;
 	Date& operator-=(int day);
-	Date operator-(int day);
+	Date operator-(int day) const;
 
 	Date& operator++();
 	Date operator++(int);
@@ -42,9 +42,12 @@ public:
 	int operator-(const Date& y);
 
 	friend ostream& operator<<(ostream& out, const Date& d);
-	friend istream& operator>>(istream& in,  Date& d);
+	friend istream& operator>>(istream& in, Date& d);
+
+	Date* operator&();
+	const Date* operator&() const;
 };
 
 
 ostream& operator<<(ostream& out, const Date& d);
-istream& operator>>(istream& in,  Date& d);
+istream& operator>>(istream& in, Date& d);

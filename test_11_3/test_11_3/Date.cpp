@@ -53,7 +53,7 @@ Date& Date::operator+=(int day)
 }
 
 
-Date Date::operator+(int day)
+Date Date::operator+(int day) const
 {
 	Date tmp(*this);
 
@@ -85,7 +85,7 @@ Date& Date::operator-=(int day)
 }
 
 
-Date Date::operator-(int day)
+Date Date::operator-(int day) const
 {
 	Date tmp(*this);
 
@@ -94,7 +94,7 @@ Date Date::operator-(int day)
 }
 
 
-bool Date::operator==(const Date& y)
+bool Date::operator==(const Date& y) const
 {
 	return _year == y._year
 		&& _month == y._month
@@ -102,13 +102,13 @@ bool Date::operator==(const Date& y)
 }
 
 
-bool Date::operator!=(const Date& y)
+bool Date::operator!=(const Date& y) const
 {
 	return !(*this == y);
 }
 
 
-bool Date::operator>(const Date& y)
+bool Date::operator>(const Date& y) const
 {
 	if (_year > y._year)
 	{
@@ -127,19 +127,19 @@ bool Date::operator>(const Date& y)
 }
 
 
-bool Date::operator>=(const Date& y)
+bool Date::operator>=(const Date& y) const
 {
 	return (*this > y) || (*this == y);
 }
 
 
-bool Date::operator<(const Date& y)
+bool Date::operator<(const Date& y) const
 {
 	return !(*this >= y);
 }
 
 
-bool Date::operator<=(const Date& y)
+bool Date::operator<=(const Date& y) const
 {
 	return !(*this > y);
 }
@@ -202,15 +202,27 @@ Date Date::operator--(int)
 
 ostream& operator<<(ostream& out, const Date& d)
 {
-	out << d._year << "年" << d._month << "月" << d._day << "日" << endl;
+	out << d._year << "年" << d._month << "月" << d._day << "日";
 
 	return out;
 }
 
 
-istream& operator>>(istream& in,  Date& d)
+istream& operator>>(istream& in, Date& d)
 {
 	in >> d._year >> d._month >> d._day;
 
 	return in;
+}
+
+
+Date* Date::operator&()
+{
+	return this;
+}
+
+
+const Date* Date::operator&() const
+{
+	return this;
 }
