@@ -14,14 +14,23 @@ public:
 		,_day(day)
 	{}
 
-	~Date
+	~Date()
 	{
-		_year = 0;
-	_month = 0;
-
+		_year = 1;
+		_month = 1;
+		_day = 1;
 	}
+
+	void Print();
+	friend ostream& operator<<(ostream& out, const Date& d);
+	friend istream& operator>>(istream& in, Date& d);
+
 private:
 	int _year;
 	int _month;
 	int _day;
 };
+
+
+ostream& operator<<(ostream& out, const Date& d);
+istream& operator>>(istream& in, Date& d);
