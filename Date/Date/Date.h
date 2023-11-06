@@ -25,6 +25,25 @@ public:
 	friend ostream& operator<<(ostream& out, const Date& d);
 	friend istream& operator>>(istream& in, Date& d);
 
+	int GetMonthDay(int year, int month);
+
+	Date& operator+=(int x);
+	Date operator+(int x);
+	Date& operator-=(int x);
+	Date operator-(int x);
+
+	Date& operator++();
+	Date operator++(int);
+	Date& operator--();
+	Date operator--(int);
+
+	bool operator==(const Date& d) const;
+	bool operator>(const Date& d) const;
+	bool operator!=(const Date& d) const;
+	bool operator>=(const Date& d) const;
+	bool operator<(const Date& d) const;
+	bool operator<=(const Date& d) const;
+
 private:
 	int _year;
 	int _month;
