@@ -26,7 +26,9 @@ public:
 	friend istream& operator>>(istream& in, Date& d);
 
 	int GetMonthDay(int year, int month);
+	
 
+	Date& operator=(const Date& d);
 	Date& operator+=(int x);
 	Date operator+(int x);
 	Date& operator-=(int x);
