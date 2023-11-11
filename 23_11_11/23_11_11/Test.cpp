@@ -87,3 +87,41 @@
 //    Date d1;
 //    return 0;
 //}
+
+
+#include <iostream>
+using namespace std;
+
+class Stack
+{
+public:
+    Stack(int capacity = 3)
+    {
+        _a = (int*)malloc(sizeof(int) * capacity);
+        if (nullptr == _a)
+        {
+            perror("malloc");
+        }
+        _capacity = capacity;
+        _top = 0;
+    }
+
+    ~Stack()
+    {
+        free(_a);
+        _top = _capacity = 0;
+        _a = nullptr;
+    }
+
+private:
+    int* _a;
+    int _capacity;
+    int _top;
+};
+
+int main()
+{
+    Stack st1;
+
+    return 0;
+}
