@@ -20,11 +20,11 @@ public:
 		_day = day;
 	}
 
-	Date(Date& d)
+	Date(Date& dd)
 	{
-		_year = d._year;
-		_month = d._month;
-		_day = d._day;
+		_year = dd._year;
+		_month = dd._month;
+		_day = dd._day;
 	}
 
 	void Print()
