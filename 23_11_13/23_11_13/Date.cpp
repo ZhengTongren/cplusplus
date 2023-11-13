@@ -79,7 +79,7 @@ Date Date::operator-(int x)
 }
 
 
-Date Date::operator-(const Date& d)
-{
-	int x
-}
+//Date Date::operator-(const Date& d)
+//{
+//	int x
+//}
