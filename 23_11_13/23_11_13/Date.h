@@ -21,8 +21,9 @@ public:
 	Date& operator+=(int x);
 	Date operator+(int x);
 
-	Date operator-(const Date& d);
+	Date& operator-=(int x);
 	Date operator-(int x);
+	Date operator-(const Date& d);
 
 
 private:

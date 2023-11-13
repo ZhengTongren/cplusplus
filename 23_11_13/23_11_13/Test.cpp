@@ -10,7 +10,7 @@ int main()
 	/*d1 += 2000;
 	d1.Print();*/
 
-	Date d2 = d1 + 2000;
+	Date d2 = d1 -= 2000;
 	d2.Print();
 
 	return 0;

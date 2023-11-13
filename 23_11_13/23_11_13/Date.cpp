@@ -15,6 +15,11 @@ int GetMonthDay(int year, int month)
 
 Date& Date::operator+=(int x)
 {
+	if (x < 0)
+	{
+		return *this -= (-x);
+	}
+
 	_day += x;
 	while (_day > GetMonthDay(_year, _month))
 	{
@@ -41,4 +46,40 @@ Date Date::operator+(int x)
 	Date tmp(*this);
 	tmp += x;
 	return tmp;
+}
+
+
+Date& Date::operator-=(int x)
+{
+	if (x < 0)
+	{
+		return *this += (-x);
+	}
+	_day -= x;
+	while (_day <= 0)
+	{
+		_month--;
+		if (_month == 0)
+		{
+			_month = 12;
+			_year--;
+		}
+		_day += GetMonthDay(_year, _month);
+	}
+
+	return *this;
+}
+
+
+Date Date::operator-(int x)
+{
+	Date tmp(*this);
+	tmp -= x;
+	return tmp;
+}
+
+
+Date Date::operator-(const Date& d)
+{
+	int x
 }
