@@ -106,7 +106,7 @@ Date Date::operator-(int x)
 //}
 
 
-bool Date::operator==(const Date& d)
+bool Date::operator==(const Date& d) const
 {
 	return _year == d._year
 		&& _month == d._month
@@ -114,7 +114,7 @@ bool Date::operator==(const Date& d)
 }
 
 
-bool Date::operator>(const Date& d)
+bool Date::operator>(const Date& d) const
 {
 	if (_year > d._year)
 	{
@@ -133,13 +133,13 @@ bool Date::operator>(const Date& d)
 }
 
 
-bool Date::operator<(const Date& d)
+bool Date::operator<(const Date& d) const
 {
 	return !(*this > d || *this == d);
 }
 
 
-bool Date::operator!=(const Date& d)
+bool Date::operator!=(const Date& d) const
 {
 	return !(*this == d);
 }

@@ -25,10 +25,10 @@ public:
 	}
 	int GetMonthDay(int year, int month);
 
-	bool operator==(const Date& d);
-	bool operator>(const Date& d);
-	bool operator<(const Date& d);
-	bool operator!=(const Date& d);
+	bool operator==(const Date& d) const;
+	bool operator>(const Date& d) const;
+	bool operator<(const Date& d) const;
+	bool operator!=(const Date& d) const;
 
 	Date& operator+=(int x);
 	Date operator+(int x);
