@@ -24,12 +24,14 @@ void Test1()
 }
 
 
-int main()
-{
-	//Test1();
-	Date d1(2023, 11, 14);
-	Date d2(2035, 7, 8);
+//int main()
+//{
+//	//Test1();
+//	Date d1(2023, 11, 14);
+//	Date d2(2035, 7, 8);
+//
+//	cout << d1 - d2 << endl;
+//	return 0;
+//}
 
-	cout << d1 - d2 << endl;
-	return 0;
-}
+

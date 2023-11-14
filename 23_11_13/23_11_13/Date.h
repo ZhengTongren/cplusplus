@@ -17,6 +17,8 @@ public:
 		_day = day;
 	}
 
+	
+
 	void Print()
 	{
 		cout << _year << " " << _month << " " << _day << endl;
