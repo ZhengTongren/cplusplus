@@ -131,3 +131,54 @@ bool Date::operator>(const Date& d)
 
 	return false;
 }
+
+
+bool Date::operator<(const Date& d)
+{
+	return !(*this > d || *this == d);
+}
+
+
+bool Date::operator!=(const Date& d)
+{
+	return !(*this == d);
+}
+
+
+int Date::operator-(const Date& d)
+{
+	int flag = 1;// 假设左大右小
+	Date max(*this);
+	Date min(d);
+
+	// 左小右大进行调整
+	if (max < min)
+	{
+		max = d;
+		min = *this;
+		flag = -1;
+	}
+
+	int n = 0;
+	while (min != max)
+	{
+		min++;
+		n++;
+	}
+	return n * flag;
+}
+
+
+Date& Date::operator++()
+{
+	*this += 1;
+	return *this;
+}
+
+
+Date Date::operator++(int)
+{
+	Date tmp(*this);
+	*this += 1;
+	return tmp;
+}

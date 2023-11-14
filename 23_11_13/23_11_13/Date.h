@@ -25,15 +25,18 @@ public:
 
 	bool operator==(const Date& d);
 	bool operator>(const Date& d);
+	bool operator<(const Date& d);
+	bool operator!=(const Date& d);
 
 	Date& operator+=(int x);
 	Date operator+(int x);
 	Date& operator-=(int x);
 	Date operator-(int x);
-	int operator-(const Date& d);
 	
 	Date& operator++();
 	Date operator++(int);
+
+	int operator-(const Date& d);
 
 private:
 	int _year;
