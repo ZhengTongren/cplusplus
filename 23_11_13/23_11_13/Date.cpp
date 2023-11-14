@@ -1,7 +1,7 @@
 #include "Date.h"
 
 
-int GetMonthDay(int year, int month)
+int Date::GetMonthDay(int year, int month)
 {
 	assert(month >= 1 && month <= 12);
 	int Day[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -83,3 +83,30 @@ Date Date::operator-(int x)
 //{
 //	int x
 //}
+
+
+bool Date::operator==(const Date& d)
+{
+	return _year == d._year
+		&& _month == d._month
+		&& _day == d._day;
+}
+
+
+bool Date::operator>(const Date& d)
+{
+	if (_year > d._year)
+	{
+		return true;
+	}
+	else if (_year == d._year && _month > d._month)
+	{
+		return true;
+	}
+	else if (_year == d._year && _month == d._month && _day > d._day)
+	{
+		return true;
+	}
+
+	return false;
+}

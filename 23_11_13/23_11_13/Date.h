@@ -18,6 +18,7 @@ public:
 	}
 
 	void Print();
+	int GetMonthDay(int year, int month);
 
 	bool operator==(const Date& d);
 	bool operator>(const Date& d);
@@ -26,8 +27,10 @@ public:
 	Date operator+(int x);
 	Date& operator-=(int x);
 	Date operator-(int x);
+	int operator-(const Date& d);
 	
-
+	Date& operator++();
+	Date operator++(int);
 
 private:
 	int _year;
