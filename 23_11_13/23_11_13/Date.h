@@ -17,7 +17,10 @@ public:
 		_day = day;
 	}
 
-	void Print();
+	void Print()
+	{
+		cout << _year << " " << _month << " " << _day << endl;
+	}
 	int GetMonthDay(int year, int month);
 
 	bool operator==(const Date& d);

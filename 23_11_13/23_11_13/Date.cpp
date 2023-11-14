@@ -12,41 +12,62 @@ int Date::GetMonthDay(int year, int month)
 	return Day[month];
 }
 
+Date Date::operator+(int x)
+{
+	Date tmp(*this);
+
+	tmp._day += x;
+	while (tmp._day > GetMonthDay(tmp._year, tmp._month))
+	{
+		tmp._day -= GetMonthDay(tmp._year, tmp._month);
+		tmp._month++;
+		if (tmp._month == 13)
+		{
+			tmp._year++;
+			tmp._month = 1;
+		}
+	}
+	return tmp;
+}
 
 Date& Date::operator+=(int x)
 {
-	if (x < 0)
-	{
-		return *this -= (-x);
-	}
-
-	_day += x;
-	while (_day > GetMonthDay(_year, _month))
-	{
-		_day -= GetMonthDay(_year, _month);
-		_month++;
-		if (_month == 13)
-		{
-			_year++;
-			_month = 1;
-		}
-	}
+	*this = *this + x;
 	return *this;
 }
 
 
-void Date::Print()
-{
-	cout << _year << " " << _month << " " << _day << endl;
-}
+//Date& Date::operator+=(int x)
+//{
+//	if (x < 0)
+//	{
+//		return *this -= (-x);
+//	}
+//
+//	_day += x;
+//	while (_day > GetMonthDay(_year, _month))
+//	{
+//		_day -= GetMonthDay(_year, _month);
+//		_month++;
+//		if (_month == 13)
+//		{
+//			_year++;
+//			_month = 1;
+//		}
+//	}
+//	return *this;
+//}
 
 
-Date Date::operator+(int x)
-{
-	Date tmp(*this);
-	tmp += x;
-	return tmp;
-}
+
+
+
+//Date Date::operator+(int x)
+//{
+//	Date tmp(*this);
+//	tmp += x;
+//	return tmp;
+//}
 
 
 Date& Date::operator-=(int x)
