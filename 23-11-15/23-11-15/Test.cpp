@@ -78,22 +78,24 @@ private:
 //}
 
 
-class A
-{
-public:
-	A(int a)
-		:_a1(a)
-		,_a2(_a1)
-	{}
-private:
-	int _a2;
-	int _a1;
-};
+//class A
+//{
+//public:
+//	A(int a)
+//		:_a1(a)
+//		,_a2(_a1)
+//	{}
+//private:
+//	int _a2;
+//	int _a1;
+//};
+//
+//
+//int main()
+//{
+//	A a(1);
+//
+//	return 0;
+//}
 
 
-int main()
-{
-	A a(1);
-
-	return 0;
-}
