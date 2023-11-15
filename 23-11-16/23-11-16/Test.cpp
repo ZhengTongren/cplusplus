@@ -124,54 +124,54 @@ using namespace std;
 //}
 //
 
-class A
-{
-public:
-	A()
-	{
-		cout << "A()" << endl;
-		++count;
-	}
-
-	A(const A& a)
-	{
-		cout << "A(const A& a)" << endl;
-		++count;
-	}
-
-	~A()
-	{
-		cout << "~A()" << endl;
-	}
-
-	static int GetCount()
-	{
-		return count;
-	}
-
-private:
-	static int count;
-	// 静态成员变量受访问限定符限制
-};
-
-int A::count = 0;
-
-A Func()
-{
-	A aa;
-	return aa;
-}
-
-int main()
-{
-	
-	
-	Func();	
-	//cout << A::count << endl; // 受访问限定符限制
-	cout << A::GetCount() << endl;
-
-	return 0;
-}
+//class A
+//{
+//public:
+//	A()
+//	{
+//		cout << "A()" << endl;
+//		++count;
+//	}
+//
+//	A(const A& a)
+//	{
+//		cout << "A(const A& a)" << endl;
+//		++count;
+//	}
+//
+//	~A()
+//	{
+//		cout << "~A()" << endl;
+//	}
+//
+//	static int GetCount()
+//	{
+//		return count;
+//	}
+//
+//private:
+//	static int count;
+//	// 静态成员变量受访问限定符限制
+//};
+//
+//int A::count = 0;
+//
+//A Func()
+//{
+//	A aa;
+//	return aa;
+//}
+//
+//int main()
+//{
+//	
+//	
+//	Func();	
+//	//cout << A::count << endl; // 受访问限定符限制
+//	cout << A::GetCount() << endl;
+//
+//	return 0;
+//}
 
 ///////////////////////////////
 
@@ -223,3 +223,55 @@ int main()
 //	cout << A::GetCount() << endl;
 //	return 0;
 //}
+
+
+//////////////////
+
+class A
+{
+public:
+	A()
+	{
+		cout << "A()" << endl;
+		++count;
+	}
+
+	A(const A& a)
+	{
+		cout << "A(const A& a)" << endl;
+		++count;
+	}
+
+	~A()
+	{
+		cout << "~A()" << endl;
+	}
+
+	static int GetCount()
+	{
+		return count;
+	}
+
+private:
+	static int count;
+	// 静态成员变量受访问限定符限制
+};
+
+int A::count = 0;
+
+A Func()
+{
+	A aa;
+	return aa;
+}
+
+int main()
+{
+
+
+	Func();
+	//cout << A::count << endl; // 受访问限定符限制
+	cout << A::GetCount() << endl;
+
+	return 0;
+}
