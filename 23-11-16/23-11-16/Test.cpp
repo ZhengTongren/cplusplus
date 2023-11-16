@@ -226,20 +226,182 @@ using namespace std;
 
 
 //////////////////
+//
+//class A
+//{
+//public:
+//	A()
+//	{
+//		cout << "A()" << endl;
+//		++count;
+//	}
+//
+//	A(const A& a)
+//	{
+//		cout << "A(const A& a)" << endl;
+//		++count;
+//	}
+//
+//	~A()
+//	{
+//		cout << "~A()" << endl;
+//	}
+//
+//	static int GetCount()
+//	{
+//		return count;
+//	}
+//
+//private:
+//	static int count;
+//	// 静态成员变量受访问限定符限制
+//};
+//
+//int A::count = 0;
+//
+//A Func()
+//{
+//	A aa;
+//	return aa;
+//}
+//
+//int main()
+//{
+//
+//
+//	Func();
+//	//cout << A::count << endl; // 受访问限定符限制
+//	cout << A::GetCount() << endl;
+//
+//	return 0;
+//}
+
+//
+//class Date
+//{
+//public:
+//	explicit Date(int year = 1, int month = 1, int day = 1)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//
+//	Date(int* p)
+//	{}
+//
+//	void Print()
+//	{
+//		cout << _year << " " << _month << " " << _day << endl;
+//	}
+//
+//private:
+//	int _year;
+//	int _month;
+//	int _day;
+//};
+//
+//
+//int main()
+//{
+//	//Date d1 = 3;
+//	//d1.Print();
+//	Date d2 = nullptr;
+//
+//
+//	return 0;
+//}
+
+
+//class A
+//{
+//public:
+//	A(int a)
+//	//explicit A(int a)
+//		:_a(a)
+//	{}
+//
+//	A(int* p)
+//	{}
+//
+//	int _a = 0;
+//};
+//
+//int main()
+//{
+//	/*A aa1(1);
+//	A aa2(2);*/
+//
+//	/*A aa3 = 3;
+//	const A& ra = 3;*/
+//
+//	int* p = NULL;
+//	A aa4 = p;
+//	return 0;
+//}
+
+
+
+
+//
+//class A
+//{
+//public:
+//	A(int a1 = 1)
+//		:_a(a1)
+//	{}
+//	friend struct B;
+//private:
+//	int _a;
+//};
+//
+//
+//class B
+//{
+//public:
+//	void Func()
+//	{
+//		A aa;
+//		cout << aa._a << endl;
+//	}
+//
+//private:
+//	/*A _a1*/
+//	int _b;
+//};
+//
+//
+//int main()
+//{
+//	B b;
+//	b.Func();
+//
+//	return 0;
+//}
+
 
 class A
 {
 public:
-	A()
+	A(int a = 1)
+		:_a(a)
 	{
 		cout << "A()" << endl;
-		++count;
 	}
 
-	A(const A& a)
+	A(const A& aa)
+		:_a(aa._a)
 	{
-		cout << "A(const A& a)" << endl;
-		++count;
+		cout << "const A& aa" << endl;
+	}
+
+	A& operator=(const A& aa)
+	{
+		cout << "A& operator=(const A& aa)" << endl;
+		if (this != &aa)
+		{
+			_a = aa._a;
+		}
 	}
 
 	~A()
@@ -247,31 +409,32 @@ public:
 		cout << "~A()" << endl;
 	}
 
-	static int GetCount()
-	{
-		return count;
-	}
-
 private:
-	static int count;
-	// 静态成员变量受访问限定符限制
+	int _a;
 };
 
-int A::count = 0;
+void f1(A aa)
+{}
 
-A Func()
+A f2()
 {
-	A aa;
-	return aa;
+	A a22;
+	return a22;
 }
 
 int main()
 {
+	/*A a(1);
+	f1(a);
+	cout << endl;*/
 
+	//f1(A()); // 在一个表达式中，构造+拷贝构造——>构造
 
-	Func();
-	//cout << A::count << endl; // 受访问限定符限制
-	cout << A::GetCount() << endl;
+	/*A a21;
+	a21 = f2();*/ // 赋值重载
+
+	//A a2 = f2(); // 在一个表达式中，拷贝构造+拷贝构造——>拷贝构造
+	f1(1);// 隐式类型转换，构造+拷贝构造——>构造
 
 	return 0;
 }
