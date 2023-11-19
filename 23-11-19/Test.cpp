@@ -64,3 +64,67 @@ using namespace std;
 //}
 
 
+//class Date
+//{
+//public:
+//	Date(int year = 1900, int month = 1, int day = 1)
+//		:_year(year)
+//		, _month(month)
+//		, _day(day)
+//	{}
+//
+//	void Print();
+//	friend ostream& operator<<(ostream& out, const Date& d);
+//	friend istream& operator>>(istream& in, Date& d);
+//
+//private:
+//	int _year;
+//	int _month;
+//	int _day;
+//};
+//
+//ostream& operator<<(ostream& out, const Date& d)
+//{
+//	out << d._year << "-" << d._month << "-" << d._day;
+//	return out;
+//}
+//
+//istream& operator>>(istream& in, Date& d)
+//{
+//	in >> d._year >> d._month >> d._day;
+//	return in;
+//}istream& operator>>(istream& in, Date& d);
+//
+
+
+//class A
+//{
+//public:
+//	A()
+//		:_a(1)
+//	{}
+//	friend class B;
+//private:
+//	int _a;
+//};
+//
+//class B
+//{
+//public:
+//	B()
+//		:_b(1)
+//	{
+//		A a1;
+//	}
+//
+//private:
+//	int _b;
+//};
+//
+//int main()
+//{
+//	B b1;
+//	return 0;
+//}
+
+
