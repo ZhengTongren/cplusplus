@@ -128,3 +128,122 @@ using namespace std;
 //}
 
 
+//class Stack
+//{
+//public:
+//	Stack()
+//		:_a(nullptr)
+//	{
+//		cout << "Stack()" << endl;
+//	}
+//
+//	Stack(const Stack& st)
+//	{
+//		cout << "Stack(const Stack& st)" << endl;
+//	}
+//
+//	Stack& operator=(const Stack& st)
+//	{
+//		cout << "Stack& operator=(const Stack& st)" << endl;
+//		if (this != &st)
+//		{
+//			_a = st._a
+//		}
+//	}
+//
+//	~Stack()
+//	{
+//		cout << "~Stack()" << endl;
+//	}
+//
+//private:
+//	int* _a;
+//};
+//
+//
+//int main()
+//{
+//
+//}
+
+
+class A
+{
+public:
+	A(int aa1 = 1)
+		:_a(aa1)
+	{
+		cout << "A()" << endl;
+	}
+
+	A(const A& aa)
+		:_a(aa._a)
+	{
+		cout << "A(const A& aa)" << endl;
+	}
+
+	A& operator=(const A& aa)
+	{
+		cout << "A& operator=(const A& aa)" << endl;
+		if (this != &aa)
+		{
+			_a = aa._a;
+		}
+		return *this;
+	}
+
+	~A()
+	{
+		cout << "~A()" << endl;
+	}
+
+private:
+	int _a;
+};
+
+
+void f1(A aa)
+{
+
+}
+
+
+A f2()
+{
+	A a1;
+	return a1;
+}
+
+
+int main()
+{
+	A a2 = f2();
+	return 0;
+}
+
+
+//int main()
+//{
+//	f1(A(1));
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	f1(1);
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	A a1;
+//	f1(a1);
+//	cout << endl;
+//
+//	f2();
+//	cout << endl;
+//	return 0;
+//}
