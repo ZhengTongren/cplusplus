@@ -25,3 +25,42 @@ using namespace std;
 //}
 
 
+//class A
+//{
+//public:
+//	static int GetCount_top()
+//	{
+//		_top++;
+//		return _top;
+//	}
+//
+//	A()
+//		:_a1(1)
+//	{
+//	}
+//
+//private:
+//	int _a1;
+//	static int _top;
+//};
+//
+//int A::_top = 0;
+//
+//int main()
+//{
+//	A a1;
+//	cout << a1._top << endl;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	A a1;
+//	cout << a1.GetCount_top() << endl;
+//	cout << A::GetCount_top() << endl;
+//
+//	return 0;
+//}
+
+
