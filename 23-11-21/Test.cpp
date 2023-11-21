@@ -32,3 +32,32 @@ using namespace std;
 //};
 
 
+struct ListNode
+{
+	int _val;
+	ListNode* _next;
+
+	ListNode(int x = 0)
+		:_val(x)
+		,_next(nullptr)
+	{}
+};
+
+
+int main()
+{
+	//int* p1 = new int(2);
+	////cout << *p1 << endl;
+	//int* p2 = new int[2]{ 1, 2 };
+	//
+
+	ListNode* p3 = new ListNode[3]{ ListNode(1), ListNode(2), ListNode(3) };
+	ListNode* p2 = new ListNode[3]{ 2, 2, 3 };
+	//ListNode* p1 = new ListNode(1);
+
+	delete p2;
+	delete p3;
+
+
+	return 0;
+}
