@@ -17,3 +17,34 @@ using namespace std;
 //}
 
 
+class Stack
+{
+public:
+	Stack(int capacity = 3)
+		:_top(0)
+		, _capacity(capacity)
+	{
+		cout << "Stack(int capacity = 3)" << endl;
+		_a = new int[capacity];
+	}
+
+	~Stack()
+	{
+		cout << "~Stack()" << endl;
+		delete _a;
+		_top = _capacity = 0;
+	}
+private:
+	int* _a;
+	int _top;
+	int _capacity;
+};
+
+
+int main()
+{
+	Stack* s1 = new Stack;
+	delete s1;
+
+	return 0;
+}
