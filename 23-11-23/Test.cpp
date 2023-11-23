@@ -73,3 +73,95 @@ using namespace std;
 //
 
 
+//template <class T>
+//void Swap(T& a, T& b)
+//{
+//	T tmp = a;
+//	a = b;
+//	b = tmp;
+//}
+
+
+//int main()
+//{
+//	int a = 1, a2 = 2;
+//	double b = 2.0;
+//	Swap(a, a2);
+//
+//	Swap(a, (int)b);
+//
+//	return 0;
+//}
+
+//int Swap(int& a, int& b)
+//{
+//	int tmp = a;
+//	a = b;
+//	b = tmp;
+//}
+//
+//double Swap(double& a, double& b)
+//{
+//	double tmp = a;
+//	a = b;
+//	b = tmp;
+//}
+//
+//int main()
+//{
+//	int a = 1, b = 2;
+//	double d1 = 1.2, d2 = 2.1;
+//
+//	Swap(a, b);
+//	Swap(d1, d2);
+//
+//	return 0;
+//}
+
+//template <class T>
+//T Add(const T x, const T y)
+//{
+//	return x + y;
+//}
+//
+//int main()
+//{
+//	int a1 = 1, a2 = 2;
+//	double d1 = 2.0, d2 = 1.2;
+//
+//	Add(a1, (int)d1);
+//	Add <double>(a2, d2);
+//
+//	return 0;
+//}
+
+template <class T1>
+
+class Stack
+{
+public:
+	Stack(int capacity = 3)
+		:_top(0)
+		, _capacity(capacity)
+	{
+		cout << "Stack(int capacity = 3)" << endl;
+		_a = new T1[capacity];
+	}
+
+	~Stack()
+	{
+		cout << "~Stack()" << endl;
+		delete _a;
+		_top = _capacity = 0;
+	}
+private:
+	T1* _a;
+	int _top;
+	int _capacity;
+};
+
+
+int main()
+{
+	return 0;
+}
